@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 大背景 */
+/* 默认状态html和body的高度是0，所以导致cover缩放背景图不成功 */
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background: url(../images/f1_1.jpg) no-repeat center 0 /cover;
+}
+
+/* 云 */
+.cloud img {
+    position: absolute;
+    left: 50%;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -250px;
+    top: 20px;
+    animation: cloud 1s infinite alternate linear;
+}
+.cloud img:nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+    animation: cloud 1s infinite alternate linear 0.4s;
+}
+.cloud img:nth-child(3) {
+    margin-left: -550px;
+    top: 200px;
+    animation: cloud 1s infinite alternate linear 0.6s;
+}
+
+@keyframes cloud {
+    100% {
+        transform: translate(20px);
+    }
+}
+
+/* 文字 */
+.text img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: text 1s;
+}
+
+/* 默认 小-大-小-默认 */
+@keyframes text {
+    0% {transform: translate(-50%,-50%) scale(1);}
+    20% {transform: translate(-50%,-50%) scale(0.1);}
+    40% {transform: translate(-50%,-50%) scale(1.4);}
+    70% {transform: translate(-50%,-50%) scale(0.8);}
+    100% {transform: translate(-50%,-50%) scale(1);}
+}
+/* 气球 */
+
+.balloon  {
+position: absolute;
+left: 50%;
+margin-left: -390px;
+top:20%;
+animation: balloon 1.5s linear alternate infinite;
+}
+
+@keyframes balloon {
+    /* 0% {
+        transform: translateY(0px);
+    } */
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+/* 长颈鹿 */
+
+.giraffe  {
+    position: absolute;
+    left: 50%;
+    margin-left: 200px;
+    top:15%;
+    }
+    
+    /*  跳动文字 */
+    .jump_text img{
+        position: absolute;
+        left: 50%;
+        bottom: 42px;
+        width: 100px;
+    }
+    .jump_text img:nth-child(1) {
+        margin-left: -390px;
+        animation: jump_text 0.8s infinite alternate linear;
+    }
+    .jump_text img:nth-child(2) {
+        margin-left: -180px;
+        animation: jump_text 0.8s 0.2s infinite alternate linear;
+    }
+    .jump_text img:nth-child(3) {
+        margin-left: 35px;
+        animation: jump_text 0.8s 0.4s infinite alternate linear;
+    }
+    .jump_text img:nth-child(4) {
+        margin-left: 240px;
+        animation: jump_text 0.8s 0.6s infinite alternate linear;
+    }
+
+    @keyframes jump_text {
+        100% {
+            transform: translateY(-30px);
+        }
+    }
+   
